@@ -11,7 +11,8 @@
         </ResourceDictionary>
     </Window.Resources>
 
-        <Grid HorizontalAlignment="Left">
+    <Grid HorizontalAlignment="Left">
+
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
@@ -22,38 +23,41 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="93.178"></ColumnDefinition>
+            <ColumnDefinition Width="6.822"/>
+            <ColumnDefinition Width="5.917"></ColumnDefinition>
+            <ColumnDefinition Width="94.083"/>
         </Grid.ColumnDefinitions>
-
-        <Button Name="restartButton" Grid.Column="0" Grid.Row="0" Width="36" Height="36" Click="onRestartButton_Click" Style="{StaticResource menuButtonStyle}" >
+        <Button Name="restartButton" Grid.Column="0" Grid.Row="0" Width="36" Height="36" Click="onRestartButton_Click" Style="{StaticResource menuButtonStyle}" Margin="32,8,32,7" >
             <Image Grid.Column="0" Grid.Row="0" Source="restart_icon.png" Stretch="Fill"/>
         </Button>
-        <ComboBox Name="gameModeComboBox" Grid.Column="1" Grid.Row="0" Width="80" VerticalAlignment="Center" SelectionChanged="gameModeComboBox_Click" SelectedIndex="0">
+        <ComboBox Name="gameModeComboBox" Grid.Column="1" Grid.Row="0" Width="80" VerticalAlignment="Center" SelectionChanged="gameModeComboBox_Click" SelectedIndex="0" Margin="10,14,3,15">
             <ComboBoxItem>Hot Seat</ComboBoxItem>
             <ComboBoxItem>AI Easy</ComboBoxItem>
             <ComboBoxItem>AI Hard</ComboBoxItem>
         </ComboBox>
-        <Button Name="aboutButton" Grid.Column="2" Grid.Row="0" Width="36" Height="36" Click="aboutButton_Click" Style="{StaticResource menuButtonStyle}" >
+        <Button Name="aboutButton" Grid.Column="4" Grid.Row="0" Width="36" Height="36" Click="aboutButton_Click" Style="{StaticResource menuButtonStyle}" Margin="26.083,8,32,7" >
             <Image Grid.Column="2" Grid.Row="0" Source="about_icon.png" Stretch="Fill"/>
         </Button>
 
-        <Button Name="A1" Grid.Column="0" Grid.Row="1" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="80" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" />
-        <Button Name="A2" Grid.Column="1" Grid.Row="1" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="80" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" />
-        <Button Name="A3" Grid.Column="2" Grid.Row="1" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="80" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" />
-        <Button Name="B1" Grid.Column="0" Grid.Row="2" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="80" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" />
-        <Button Name="B2" Grid.Column="1" Grid.Row="2" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="80" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" />
-        <Button Name="B3" Grid.Column="2" Grid.Row="2" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="80" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" />
-        <Button Name="C1" Grid.Column="0" Grid.Row="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="80" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" />
-        <Button Name="C2" Grid.Column="1" Grid.Row="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="80" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" />
-        <Button Name="C3" Grid.Column="2" Grid.Row="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="80" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" />
+        <Button Name="A1" Grid.Column="0" Grid.Row="1" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="101" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" Background="Black" />
+        <Button Name="A2" Grid.Column="1" Grid.Row="1" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="101" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" Background="Black" Grid.ColumnSpan="2" Margin="1,0,0,0" />
+        <Button Name="A3" Grid.Column="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="101" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" Background="Black" Grid.Row="1" Grid.ColumnSpan="2" Margin="1,0,0,0" />
+        <Button Name="B1" Grid.Column="0" Grid.Row="2" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="101" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" Background="Black" Margin="0,1" />
+        <Button Name="B2" Grid.Column="1" Grid.Row="2" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="101" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" Background="Black" Grid.ColumnSpan="2" BorderThickness="1" Margin="1" />
+        <Button Name="B3" Grid.Column="3" Grid.Row="2" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="101" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" Background="Black" Grid.ColumnSpan="2" Margin="0,1,0,0" />
+        <Button Name="C1" Grid.Column="0" Grid.Row="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="101" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" Background="Black" />
+        <Button Name="C2" Grid.Column="1" Grid.Row="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="101" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" Background="Black" Grid.ColumnSpan="2" Margin="1,0" />
+        <Button Name="C3" Grid.Column="3" Grid.Row="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="101" FontSize="36" Click="gameAction_Click" Style="{StaticResource GameButtonStyle}" Background="Black" Grid.ColumnSpan="2" Margin="0,1,0,0" />
 
-        <Label Grid.Column="0" Grid.Row="4" Content="Wins X" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
-        <Label Grid.Column="1" Grid.Row="4" Content="Wins O" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
-        <Label Grid.Column="2" Grid.Row="4" Content="Ties" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+        <Label Grid.Column="0" Grid.Row="4" Content="Wins X" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Margin="8,0,8,1"/>
+        <Label Grid.Column="1" Grid.Row="4" Content="Wins O" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Grid.ColumnSpan="2" Margin="6,0,6,1"/>
+        <Label Grid.Column="4" Grid.Row="4" Content="Ties" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Margin="18.083,0,24,1"/>
 
-        <Label Name="winsX" Grid.Column="0" Grid.Row="5" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
-        <Label Name="winsO" Grid.Column="1" Grid.Row="5" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
-        <Label Name="ties" Grid.Column="2" Grid.Row="5" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
+        <Label Name="winsX" Grid.Column="0" Grid.Row="5" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Margin="36,1,36,0"/>
+        <Label Name="winsO" Grid.Column="1" Grid.Row="5" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Margin="36,1,29,0"/>
+        <Label Name="ties" Grid.Column="4" Grid.Row="5" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Margin="30.083,1,36,0"/>
+
     </Grid>
+    <!--    <Image Grid.Column="0" Grid.Row="0" Source="restart_icon.png" Stretch="Fill"/>  -->
 </Window>
